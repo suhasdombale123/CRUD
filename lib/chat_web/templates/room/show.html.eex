@@ -1,0 +1,9 @@
+<h2>Name: <%= @room.name %></h2>
+
+<div>description: <%= @room.description %></div>
+<div style="margin-top: 10px">
+  <%= link "Edit", to: Routes.room_path(@conn, :edit, @room.id), class: "btn btn-success btn-lg" %>
+</div>
+<div style="position: relative">
+<%= link "Delete", to: Routes.room_path(@conn, :delete, @room), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-lg" %>
+</div>
